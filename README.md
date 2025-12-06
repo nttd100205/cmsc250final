@@ -1,19 +1,71 @@
-## Getting Started
+# Task Manager – Java Swing Desktop App
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+A simple desktop application for managing tasks, built as a final project for an introductory computer science course.  
+Users can add and remove tasks, and the underlying data model supports priority, due date, and completion status.
 
-## Folder Structure
+---
 
-The workspace contains two folders by default, where:
+## 🧾 Features
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+✓ Add a new task using a pop-up input dialog  
+✓ Display tasks in a list with easy-to-read formatting  
+✓ Remove selected tasks from both the UI and the data model  
+✓ OOP structure with a separate model (`Task`) and controller (`TaskManager`)  
+✓ GUI built using Java Swing components
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+**Task properties supported by the model:**
+- Task name
+- Completion status (true/false)
+- Priority level (integer)
+- Due date and due time (optional)
+- Custom `toString()` formatting using `SimpleDateFormat`
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+> Current GUI implements **Add** and **Remove**.  
+> The architecture already supports additional features like editing and completing tasks.
 
-## Dependency Management
+---
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
-# cmsc250final
+## 🛠 Tech Stack
+
+| Category | Technology |
+|---------|------------|
+| Language | **Java** |
+| GUI Framework | **Swing** (`JFrame`, `JPanel`, `JList`, `JButton`, `JScrollPane`) |
+| Data Storage | `ArrayList<Task>` |
+| Date/Time | `java.util.Date`, `java.text.SimpleDateFormat` |
+| Paradigm | Object-Oriented Programming |
+
+---
+
+## 📂 Project Structure
+
+App.java → Entry point (main method)
+Task.java → Task data model
+TaskManager.java → Logic for storing & managing tasks
+TaskManagerGUI.java → User interface (Swing)
+
+---
+
+## ▶️ How to Run
+
+### Option A — Running in an IDE (IntelliJ, Eclipse, NetBeans)
+
+1. Clone the repository 
+   git clone https://github.com/nttd100205/cmsc250final.git
+Open the folder in your IDE as a Java project
+
+Set TaskManagerGUI (or App) as the main class
+
+Click Run → a window titled "Task Manager" will appear
+
+Option B — Command Line
+Clone and enter the project folder:
+
+git clone https://github.com/nttd100205/cmsc250final.git
+cd cmsc250final
+Compile all Java files:
+
+javac *.java
+Run the program:
+
+java TaskManagerGUI
